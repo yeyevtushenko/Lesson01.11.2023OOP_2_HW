@@ -51,4 +51,8 @@ class Website:
     def __lt__(self, other):
         return len(self.name) < len(other.name)
 
+    @classmethod
+    def add_website(cls, name, address, description):
+        new_website = cls(name, address, description)
+        print(f"Додано новий вебсайт: {new_website.name}")
 
