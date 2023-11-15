@@ -28,6 +28,8 @@ class Person:
         self.adress = new_address
         print("Адресу проживання оновлено.")
 
+    def __str__(self):
+        return f"{self.full_name}, {self.date_of_birth}, {self.phone_number}, {self.city}, {self.country}, {self.address}"
 
 person = Person("Олексій", "06.12.2006", "+380765870090", "Киів", "Україна", "вул. Академіка Янгеля 16/2")
 
