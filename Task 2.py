@@ -39,14 +39,4 @@ class City:
                 isinstance(other, City) and
                 self.name == other.name and
                 self.population == other.population
-
-city = City("Київ", "Київський область", "Україна", 3500000, "02095", "+380")
-
-print("Інформація про місто:")
-city.display_info()
-
-city.update_data("Берлін", "Брандебург", "Німеччина", "+49", "10115")
-city.update_population(3645000)
-
-print("\nОновлена інформація про місто:")
-city.display_info()
+        )
