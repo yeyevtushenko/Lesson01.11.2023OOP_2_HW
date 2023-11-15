@@ -31,6 +31,10 @@ class Person:
     def __str__(self):
         return f"{self.full_name}, {self.date_of_birth}, {self.phone_number}, {self.city}, {self.country}, {self.address}"
 
+    def __eq__(self, other):
+        return isinstance(other, Person) and self.full_name == other.full_name and self.date_of_birth == other.date_of_birth
+
+
 person = Person("Олексій", "06.12.2006", "+380765870090", "Киів", "Україна", "вул. Академіка Янгеля 16/2")
 
 print("Інформація про людину:")
