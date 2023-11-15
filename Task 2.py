@@ -34,6 +34,11 @@ class City:
         self.phone_code = new_phone_code
         print("Дані про місто  оновлено.")
 
+    def __eq__(self, other):
+        return (
+                isinstance(other, City) and
+                self.name == other.name and
+                self.population == other.population
 
 city = City("Київ", "Київський область", "Україна", 3500000, "02095", "+380")
 
