@@ -27,5 +27,28 @@ class Website:
         self.description = new_description
         print("Інформацію про вебсайт оновлено.")
 
+    def display_info(self):
+        print("Назва вебсайту: ", self.name)
+        print("Адреса: ", self.address)
+        print("Опис вебсайту: ", self.description)
+
+    def update_description(self, new_description):
+        self.description = new_description
+        print("Опис вебсайту оновлено.")
+
+    def update_info(self, new_name, new_address, new_description):
+        self.name = new_name
+        self.address = new_address
+        self.description = new_description
+        print("Інформацію про вебсайт оновлено.")
+
+    def __str__(self):
+        return f"{self.name}, {self.address}, {self.description}"
+
+    def __ne__(self, other):
+        return self.description != other.description
+
+    def __lt__(self, other):
+        return len(self.name) < len(other.name)
 
 
