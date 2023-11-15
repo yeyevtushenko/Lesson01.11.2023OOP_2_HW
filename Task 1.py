@@ -34,14 +34,15 @@ class Person:
     def __eq__(self, other):
         return isinstance(other, Person) and self.full_name == other.full_name and self.date_of_birth == other.date_of_birth
 
+    def __lt__(self, other):
+        return self.date_of_birth < other.date_of_birth
 
-person = Person("Олексій", "06.12.2006", "+380765870090", "Киів", "Україна", "вул. Академіка Янгеля 16/2")
 
-print("Інформація про людину:")
-person.display_info()
+person1 = Person("Олексій", "06.12.2006", "+380765870090", "Київ", "Україна", "вул. Академіка Янгеля 16/2")
+person2 = Person("Ірина", "15.05.1990", "+380987654321", "Львів", "Україна", "вул. Шевченка, 5")
 
-person.update_phone_number("+987654321")
+print("Чи рівні особи:")
+print(person1 == person2)
 
-person.update_adress("Львів", "Україна", "вул. Шевченка, 5")
-print("\nОновлена інформація про людину:")
-person.display_info()
+print("\nПорівняння осіб за датою народження:")
+print(person1 < person2)
