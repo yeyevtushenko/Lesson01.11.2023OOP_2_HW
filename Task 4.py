@@ -39,3 +39,11 @@ class Watch:
                 self.model == other.model and
                 self.manufacturer == other.manufacturer
         )
+
+watch1 = Watch("Explorer", "Rolex", 2022, 10000, "наручний")
+watch2 = Watch("Seamaster", "Omega", 2021, 8000, "наручний")
+
+if watch1 == watch2:
+    print(f"{watch1.model} та {watch2.model} годинники коштують однаково.")
+else:
+    print(f"{watch1.model} дорожчий за {watch2.model}")
