@@ -24,13 +24,12 @@ class Country:
         for city in self.cities:
             print("  -", city)
 
-    def update_population(self, new_population):
-        self.population = new_population
-        print("Кількість жителів країни оновлено.")
-
     def add_city(self, new_city):
         self.cities.append(new_city)
         print(f"Додано нове місто: {new_city}")
+
+    def __str__(self):
+        return f"{self.name}, {self.continent}, {self.population}, {self.phone_code}, {self.capital}, {self.cities}"
 
 country = Country("Україна", "Європа", 38000000, "+380", "Київ", ["Львів", "Одеса", "Харків", "Миколаїв"])
 
