@@ -40,3 +40,6 @@ class City:
                 self.name == other.name and
                 self.population == other.population
         )
+city1 = City("Київ", "Київський область", "Україна", 3500000, "02095", "+380")
+city2 = City("Берлін", "Бранденбург", "Німеччина", 3645000, "10115", "+49")
+
