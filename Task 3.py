@@ -31,15 +31,20 @@ class Country:
     def __str__(self):
         return f"{self.name}, {self.continent}, {self.population}, {self.phone_code}, {self.capital}, {self.cities}"
 
-country = Country("Україна", "Європа", 38000000, "+380", "Київ", ["Львів", "Одеса", "Харків", "Миколаїв"])
+    def __eq__(self, other):
+        return (
+                isinstance(other, Country) and
+                self.name == other.name and
+                self.population == other.population
+        )
+country1 = Country("Україна", "Європа", 38000000, "+380", "Київ", ["Львів", "Одеса", "Харків", "Миколаїв"])
+country2 = Country("Німеччина", "Європа", 83000000, "+49", "Берлін", ["Мюнхен", "Гамбург", "Франкфурт"])
 
+if country1 == country2:
+    print(f"{country1.name} та {country2.name} - мають однакову кількість населення країни.")
+else:
+    print(f"{country1.name} та {country2.name} - мають різну кількість населення країни.")
 
-print("Інформація про країну:")
-country.display_info()
-
-country.update_population(35000000)
-
-country.add_city("Дніпро")
-
-print("\nОновлена інформація про країну:")
-country.display_info()
+print("\nІнформація про країну у вигляді рядка:")
+print(str(country1))
+print(str(country2))
