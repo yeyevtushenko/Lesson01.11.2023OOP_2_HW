@@ -12,4 +12,20 @@ class Website:
         self.description = description
         Website.websites_list.append(self)
 
+    def display_info(self):
+        print("Назва вебсайту: ", self.name)
+        print("Адреса: ", self.address)
+        print("Опис вебсайту: ", self.description)
+
+    def update_description(self, new_description):
+        self.description = new_description
+        print("Опис вебсайту оновлено.")
+
+    def update_info(self, new_name, new_address, new_description):
+        self.name = new_name
+        self.address = new_address
+        self.description = new_description
+        print("Інформацію про вебсайт оновлено.")
+
+
 
