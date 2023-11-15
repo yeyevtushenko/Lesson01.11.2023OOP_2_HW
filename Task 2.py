@@ -43,3 +43,11 @@ class City:
 city1 = City("Київ", "Київський область", "Україна", 3500000, "02095", "+380")
 city2 = City("Берлін", "Бранденбург", "Німеччина", 3645000, "10115", "+49")
 
+if city1 == city2:
+    print(f"{city1.name} та {city2.name} - однакові міста.")
+else:
+    print(f"{city1.name} та {city2.name} - різні міста.")
+
+print("Інформація про міста:")
+city1.display_info()
+city2.display_info()
